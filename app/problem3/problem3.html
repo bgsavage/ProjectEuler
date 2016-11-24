@@ -1,0 +1,7 @@
+<div>
+    <h2>Problem {{problemNumber}}</h2>    
+    <input [(ngModel)]='input' />
+    <button (click)=getResult(input)>Go</button>
+    <div *ngIf="inProgress">Calculating...</div>
+    <h4 *ngIf="!inProgress">Result: {{result}}</h4>
+</div>

@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: '<h1>{{title}} {{hero()}}</h1>'
+  templateUrl: 'app/app.html'
 })
 export class AppComponent { 
-  title = 'Project Euler'
-  hero = function(){
-    return 'windstorm';
-  }
+  title = 'Project Euler';
 }
