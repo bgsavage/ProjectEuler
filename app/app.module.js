@@ -13,14 +13,15 @@ var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var problem3_component_1 = require('./problem3/problem3.component');
+var problem14_component_1 = require('./problem14/problem14.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, problem3_component_1.Problem3Component],
-            bootstrap: [app_component_1.AppComponent]
+            declarations: [app_component_1.AppComponent, problem3_component_1.Problem3Component, problem14_component_1.Problem14Component],
+            bootstrap: [app_component_1.AppComponent, problem3_component_1.Problem3Component, problem14_component_1.Problem14Component]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
