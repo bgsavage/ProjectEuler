@@ -4,15 +4,10 @@ import { Injectable } from '@angular/core';
 
 export class PrimeService  {
     getLargestPrimeFactorOf(input: number){
-        var toTest = input;
         var highestPrime= -1;
 
         for(var i= 2; i<=input; i++) {
-            var isDivisible = false;
-
-            var isPrime = this.isPrime(i);
-
-            if(isPrime) {
+            if(this.isPrime(i)) {
                 while(input % i == 0 && input >= i) {
                     highestPrime = i;
                     input = input / i;
@@ -29,7 +24,7 @@ export class PrimeService  {
                 return false;
             }                
         }
-        
+
         return true;
     };
 }
