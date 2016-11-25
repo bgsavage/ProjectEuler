@@ -9,16 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var eulerProblem_factory_1 = require('./eulerProblem.factory');
+var problem3_1 = require('./problem3/problem3');
+var problem14_1 = require('./problem14/problem14');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(problemFactory) {
         this.title = 'Project Euler';
+        this.problems = problemFactory.getEulerProblems();
+        this.selectedProblem = 0;
     }
+    AppComponent.prototype.getResult = function (input) {
+        var index = this.selectedProblem;
+        this.result = undefined;
+        this.result = this.problems[index].getResult(input);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
+            providers: [eulerProblem_factory_1.EulerProblemFactory, problem3_1.Problem3, problem14_1.Problem14],
             templateUrl: 'app/app.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [eulerProblem_factory_1.EulerProblemFactory])
     ], AppComponent);
     return AppComponent;
 }());

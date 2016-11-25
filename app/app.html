@@ -1,5 +1,14 @@
 <div class='form-group'>
     <h1>{{title}}</h1>
-    <problem-3>Loading problem 3...</problem-3>
-    <problem-14>Loading problem 14...</problem-14>
+    <div>Number of problems solved: {{problems.length}}</div>
+    <div>
+        <select [(ngModel)]="selectedProblem">
+            <option *ngFor="let problem of problems; let i = index" value= {{i}}>
+                Problem {{problem.number}}
+            </option>
+        </select>
+        <input [(ngModel)]='input' />
+        <button (click)=getResult(input)>Go</button>
+    </div>
+    <h4 *ngIf='result'>Result: {{result}}</h4>
 </div>

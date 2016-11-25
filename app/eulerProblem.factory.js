@@ -9,21 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var AppModule = (function () {
-    function AppModule() {
+var problem3_1 = require('./problem3/problem3');
+var problem14_1 = require('./problem14/problem14');
+var EulerProblemFactory = (function () {
+    function EulerProblemFactory(problem3, problem14) {
+        this.eulerProblems = [
+            problem3,
+            problem14
+        ];
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    EulerProblemFactory.prototype.getEulerProblems = function () {
+        return this.eulerProblems;
+    };
+    EulerProblemFactory = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [problem3_1.Problem3, problem14_1.Problem14])
+    ], EulerProblemFactory);
+    return EulerProblemFactory;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.EulerProblemFactory = EulerProblemFactory;
+//# sourceMappingURL=eulerProblem.factory.js.map
