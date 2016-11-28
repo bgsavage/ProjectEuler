@@ -6,6 +6,7 @@ Injectable()
 
 export class Problem14 implements EulerProblem { 
   number = 14;
+  description = 'Which starting number has the longest Collatz sequence under the given input.';
   collatzService;
   result;
 

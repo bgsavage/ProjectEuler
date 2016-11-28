@@ -6,6 +6,7 @@ Injectable()
 
 export class Problem3 implements EulerProblem { 
   number = 3;
+  description = 'Largest prime factor of the given input.';
   private primeService;
 
   getResult(input: number) {

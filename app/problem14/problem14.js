@@ -5,6 +5,7 @@ core_1.Injectable();
 var Problem14 = (function () {
     function Problem14() {
         this.number = 14;
+        this.description = 'Which starting number has the longest Collatz sequence under the given input.';
         this.collatzService = new collatz_service_1.CollatzService();
     }
     Problem14.prototype.getResult = function (input) {

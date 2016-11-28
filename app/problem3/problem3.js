@@ -5,6 +5,7 @@ core_1.Injectable();
 var Problem3 = (function () {
     function Problem3() {
         this.number = 3;
+        this.description = 'Largest prime factor of the given input.';
         this.primeService = new prime_service_1.PrimeService();
     }
     Problem3.prototype.getResult = function (input) {

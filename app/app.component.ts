@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { EulerProblemFactory } from './eulerProblem.factory';
+import { Problem1 } from './problem1/problem1';
+import { Problem2 } from './problem2/problem2';
 import { Problem3 } from './problem3/problem3';
 import { Problem14 } from './problem14/problem14';
 
 @Component({
   selector: 'my-app',
-  providers: [EulerProblemFactory, Problem3, Problem14 ],
+  providers: [EulerProblemFactory, Problem3, Problem14, Problem1, Problem2 ],
   templateUrl: 'app/app.html'
 })
 export class AppComponent { 

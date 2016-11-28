@@ -10,5 +10,6 @@
         <input [(ngModel)]='input' />
         <button (click)=getResult(input)>Go</button>
     </div>
+    <div>{{problems[selectedProblem].description}}</div>
     <h4 *ngIf='result'>Result: {{result}}</h4>
 </div>
