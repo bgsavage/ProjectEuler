@@ -13,6 +13,7 @@ var eulerProblem_factory_1 = require('./eulerProblem.factory');
 var problem1_1 = require('./problem1/problem1');
 var problem2_1 = require('./problem2/problem2');
 var problem3_1 = require('./problem3/problem3');
+var problem4_1 = require('./problem4/problem4');
 var problem14_1 = require('./problem14/problem14');
 var AppComponent = (function () {
     function AppComponent(problemFactory) {
@@ -28,7 +29,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            providers: [eulerProblem_factory_1.EulerProblemFactory, problem3_1.Problem3, problem14_1.Problem14, problem1_1.Problem1, problem2_1.Problem2],
+            providers: [eulerProblem_factory_1.EulerProblemFactory, problem3_1.Problem3, problem14_1.Problem14, problem1_1.Problem1, problem2_1.Problem2, problem4_1.Problem4],
             templateUrl: 'app/app.html'
         }), 
         __metadata('design:paramtypes', [eulerProblem_factory_1.EulerProblemFactory])
