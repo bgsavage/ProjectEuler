@@ -1,5 +1,5 @@
 "use strict";
-var prime_service_1 = require('./prime.service');
+var prime_service_1 = require('./../math/prime.service');
 var core_1 = require('@angular/core');
 core_1.Injectable();
 var Problem3 = (function () {

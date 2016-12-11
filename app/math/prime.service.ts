@@ -7,15 +7,24 @@ export class PrimeService  {
         var highestPrime= -1;
 
         for(var i= 2; i<=input; i++) {
-            if(this.isPrime(i)) {
-                while(input % i == 0 && input >= i) {
-                    highestPrime = i;
-                    input = input / i;
-                }
-            }
+            while(input % i == 0 && input >= i) {
+                highestPrime = i;
+                input = input / i;
+            }            
         }
 
         return highestPrime;
+    }
+
+    getPrimeFactors(input: number)  {
+        var factors = [];
+        for(var i= 2; i<=input; i++) {
+            while(input % i == 0 && input >= i) {
+                factors.push(i);
+                input = input / i;
+            }            
+        }
+        return factors;
     }
     
     isPrime(input: number) {
@@ -26,5 +35,5 @@ export class PrimeService  {
         }
 
         return true;
-    };
+    }
 }

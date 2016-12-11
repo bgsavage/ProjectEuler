@@ -1,5 +1,5 @@
 import { EulerProblem } from './../eulerproblem.interface';
-import { PrimeService } from './prime.service';
+import { PrimeService } from './../math/prime.service';
 import { Injectable } from '@angular/core';
 
 Injectable()

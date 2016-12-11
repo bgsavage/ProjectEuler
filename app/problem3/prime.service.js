@@ -15,14 +15,21 @@ var PrimeService = (function () {
     PrimeService.prototype.getLargestPrimeFactorOf = function (input) {
         var highestPrime = -1;
         for (var i = 2; i <= input; i++) {
-            if (this.isPrime(i)) {
-                while (input % i == 0 && input >= i) {
-                    highestPrime = i;
-                    input = input / i;
-                }
+            while (input % i == 0 && input >= i) {
+                highestPrime = i;
+                input = input / i;
             }
         }
         return highestPrime;
+    };
+    PrimeService.prototype.getPrimeFactors = function (input) {
+        var factors = [];
+        for (var i = 2; i <= input; i++) {
+            while (input % i == 0 && input >= i) {
+                factors.push(i);
+                input = input / i;
+            }
+        }
     };
     PrimeService.prototype.isPrime = function (input) {
         for (var j = 2; j < input; j++) {
@@ -32,7 +39,6 @@ var PrimeService = (function () {
         }
         return true;
     };
-    ;
     PrimeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

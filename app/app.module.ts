@@ -2,9 +2,10 @@ import { NgModule }      from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
+import { EulerModule } from './euler.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, EulerModule ],
   declarations: [ AppComponent],
   bootstrap:    [ AppComponent ]
 })
