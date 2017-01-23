@@ -20,6 +20,6 @@ export class AppComponent {
 
   constructor(problemFactory : EulerProblemFactory) {
       this.problems = problemFactory.getEulerProblems();
-      this.selectedProblem = 4;
+      this.selectedProblem = 6;
   }
 }

@@ -1,4 +1,4 @@
-import { CollatzService } from './collatz.service';
+import { CollatzService } from './../math/collatz.service';
 import { EulerProblem } from './../eulerproblem.interface';
 import { Injectable } from '@angular/core';
 

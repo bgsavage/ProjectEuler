@@ -14,7 +14,7 @@ var AppComponent = (function () {
     function AppComponent(problemFactory) {
         this.title = 'Project Euler';
         this.problems = problemFactory.getEulerProblems();
-        this.selectedProblem = 4;
+        this.selectedProblem = 6;
     }
     AppComponent.prototype.getResult = function (input) {
         var index = this.selectedProblem;

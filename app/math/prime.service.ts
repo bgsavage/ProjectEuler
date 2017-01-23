@@ -28,10 +28,11 @@ export class PrimeService  {
     }
     
     isPrime(input: number) {
-        for(var j = 2; j < input; j++) {          
-            if(input % j == 0) {
-                return false;
-            }                
+        let maxValueToTest = Math.floor(Math.sqrt(input));
+
+        for(var j = 2; j <= maxValueToTest; j++) {          
+            if(input % j == 0) 
+                return false;                           
         }
 
         return true;

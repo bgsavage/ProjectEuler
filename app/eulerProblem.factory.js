@@ -9,15 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var problem1_1 = require('./problem1/problem1');
-var problem2_1 = require('./problem2/problem2');
-var problem3_1 = require('./problem3/problem3');
-var problem4_1 = require('./problem4/problem4');
-var problem5_1 = require('./problem5/problem5');
-var problem9_1 = require('./problem9/problem9');
-var problem14_1 = require('./problem14/problem14');
+var problem1_1 = require('./problems/problem1');
+var problem2_1 = require('./problems/problem2');
+var problem3_1 = require('./problems/problem3');
+var problem4_1 = require('./problems/problem4');
+var problem5_1 = require('./problems/problem5');
+var problem9_1 = require('./problems/problem9');
+var problem10_1 = require('./problems/problem10');
+var problem14_1 = require('./problems/problem14');
 var EulerProblemFactory = (function () {
-    function EulerProblemFactory(problem1, problem2, problem3, problem4, problem5, problem9, problem14) {
+    function EulerProblemFactory(problem1, problem2, problem3, problem4, problem5, problem9, problem10, problem14) {
         this.eulerProblems = [
             problem1,
             problem2,
@@ -25,6 +26,7 @@ var EulerProblemFactory = (function () {
             problem4,
             problem5,
             problem9,
+            problem10,
             problem14
         ];
     }
@@ -33,7 +35,7 @@ var EulerProblemFactory = (function () {
     };
     EulerProblemFactory = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [problem1_1.Problem1, problem2_1.Problem2, problem3_1.Problem3, problem4_1.Problem4, problem5_1.Problem5, problem9_1.Problem9, problem14_1.Problem14])
+        __metadata('design:paramtypes', [problem1_1.Problem1, problem2_1.Problem2, problem3_1.Problem3, problem4_1.Problem4, problem5_1.Problem5, problem9_1.Problem9, problem10_1.Problem10, problem14_1.Problem14])
     ], EulerProblemFactory);
     return EulerProblemFactory;
 }());
