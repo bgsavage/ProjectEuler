@@ -1,7 +1,7 @@
 import { EulerProblem } from './../eulerproblem.interface';
 import { Injectable } from '@angular/core';
 
-Injectable()
+@Injectable()
 
 export class Problem9 implements EulerProblem {
   number = 9;

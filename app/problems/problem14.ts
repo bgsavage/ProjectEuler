@@ -2,16 +2,14 @@ import { CollatzService } from './../math/collatz.service';
 import { EulerProblem } from './../eulerproblem.interface';
 import { Injectable } from '@angular/core';
 
-Injectable()
+@Injectable()
 
 export class Problem14 implements EulerProblem { 
   number = 14;
   description = 'Which starting number has the longest Collatz sequence under the given input.';
-  collatzService;
   result;
 
-  constructor() {
-      this.collatzService = new CollatzService();          
+  constructor(private collatzService : CollatzService) {
   }
 
   getResult(input: number) {

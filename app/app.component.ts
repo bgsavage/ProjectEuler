@@ -17,9 +17,9 @@ export class AppComponent {
     this.result = undefined;
     this.result = this.problems[index].getResult(input);
   }
-
+  
   constructor(problemFactory : EulerProblemFactory) {
       this.problems = problemFactory.getEulerProblems();
-      this.selectedProblem = 6;
+      this.selectedProblem = 7;
   }
 }

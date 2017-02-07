@@ -2,12 +2,11 @@ import { EulerProblem } from './../eulerproblem.interface';
 import { PrimeService } from './../math/prime.service';
 import { Injectable } from '@angular/core';
 
-Injectable()
+@Injectable()
 
 export class Problem5 implements EulerProblem {
   number = 5;
   description = 'The smallest positive number that is evenly divisible by all of the numbers from 1 through a given input'
-  private primeService: PrimeService;
 
   getResult(input: number) {
       let allFactors:PrimeFactor[] = [];    
@@ -43,8 +42,7 @@ export class Problem5 implements EulerProblem {
       return result;
   }
 
-  constructor() {
-      this.primeService = new PrimeService();          
+  constructor(private primeService : PrimeService) {
   }
 }
 
