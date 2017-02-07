@@ -9,13 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var data_service_1 = require('./data/data.service');
 var eulerProblem_factory_1 = require('./eulerProblem.factory');
 var AppComponent = (function () {
-    function AppComponent(problemFactory) {
+    function AppComponent(problemFactory, dataService) {
+        this.dataService = dataService;
         this.title = 'Project Euler';
         this.problems = problemFactory.getEulerProblems();
         this.selectedProblem = 7;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.dataService.preFetchData();
+    };
     AppComponent.prototype.getResult = function (input) {
         var index = this.selectedProblem;
         this.result = undefined;
@@ -27,7 +32,7 @@ var AppComponent = (function () {
             providers: [eulerProblem_factory_1.EulerProblemFactory],
             templateUrl: 'app/app.html'
         }), 
-        __metadata('design:paramtypes', [eulerProblem_factory_1.EulerProblemFactory])
+        __metadata('design:paramtypes', [eulerProblem_factory_1.EulerProblemFactory, data_service_1.DataService])
     ], AppComponent);
     return AppComponent;
 }());

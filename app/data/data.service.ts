@@ -7,13 +7,26 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService  {
     constructor(private http: Http ) { }
+    private numberGrid : String[][];
 
-    fetchData() : Observable<String[][]> {
+    public preFetchData() : void {
+        this.fetchNumberGrid()
+        .subscribe(
+            data => this.numberGrid = data,
+            error => console.log(error)
+        );
+    }
+
+    public getNumberGrid(): String[][] {
+        return this.numberGrid;
+    }
+
+    private fetchNumberGrid() : Observable<String[][]> {
         return this.http.get('app/data/numberGrid.json')
             .map(this.extractData)
             .catch(this.handleError);
     }
-
+    
     private extractData(res: Response) {
         let body = res.json();
         return body.grid || { };
