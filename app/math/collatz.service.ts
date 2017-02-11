@@ -5,19 +5,17 @@ import { Injectable } from '@angular/core';
 export class CollatzService {
     getSequence(input: number) {        
         var max =0;
-        var value = -1;
 
         for(var i=1; i<=input; i++) {
             var current = this.getSequenceLengthAt(i);
             
             if(current > max) {
                 max = current;
-                value = i;
                 console.log(i + ' had a length of ' + max);
             }                
         }
 
-        return value;       
+        return max;       
     }
 
     getSequenceLengthAt(n: number) {

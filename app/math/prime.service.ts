@@ -16,6 +16,24 @@ export class PrimeService  {
         return highestPrime;
     }
 
+    getDivisors(input: number) {
+        let divisors = [];
+        let maxValueToTest = input;
+
+        for(var i = 1; i < maxValueToTest; i++) {          
+            if(input % i == 0) {
+                divisors.push(i);
+
+                var divisibleBy = input/i;
+                divisors.push(divisibleBy);
+                
+                maxValueToTest = divisibleBy;
+            }                
+        }
+
+        return divisors;
+    }
+
     getPrimeFactors(input: number)  {
         var factors = [];
         for(var i= 2; i<=input; i++) {

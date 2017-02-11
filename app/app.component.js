@@ -16,10 +16,10 @@ var AppComponent = (function () {
         this.dataService = dataService;
         this.title = 'Project Euler';
         this.problems = problemFactory.getEulerProblems();
-        this.selectedProblem = 7;
+        this.selectedProblem = 8;
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.dataService.preFetchData();
+        // this.dataService.preFetchData();
     };
     AppComponent.prototype.getResult = function (input) {
         var index = this.selectedProblem;

@@ -17,9 +17,10 @@ var problem5_1 = require('./problems/problem5');
 var problem9_1 = require('./problems/problem9');
 var problem10_1 = require('./problems/problem10');
 var problem11_1 = require('./problems/problem11');
+var problem12_1 = require('./problems/problem12');
 var problem14_1 = require('./problems/problem14');
 var EulerProblemFactory = (function () {
-    function EulerProblemFactory(problem1, problem2, problem3, problem4, problem5, problem9, problem10, problem11, problem14) {
+    function EulerProblemFactory(problem1, problem2, problem3, problem4, problem5, problem9, problem10, problem11, problem12, problem14) {
         this.eulerProblems = [
             problem1,
             problem2,
@@ -29,6 +30,7 @@ var EulerProblemFactory = (function () {
             problem9,
             problem10,
             problem11,
+            problem12,
             problem14
         ];
     }
@@ -37,7 +39,7 @@ var EulerProblemFactory = (function () {
     };
     EulerProblemFactory = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [problem1_1.Problem1, problem2_1.Problem2, problem3_1.Problem3, problem4_1.Problem4, problem5_1.Problem5, problem9_1.Problem9, problem10_1.Problem10, problem11_1.Problem11, problem14_1.Problem14])
+        __metadata('design:paramtypes', [problem1_1.Problem1, problem2_1.Problem2, problem3_1.Problem3, problem4_1.Problem4, problem5_1.Problem5, problem9_1.Problem9, problem10_1.Problem10, problem11_1.Problem11, problem12_1.Problem12, problem14_1.Problem14])
     ], EulerProblemFactory);
     return EulerProblemFactory;
 }());
