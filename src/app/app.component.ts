@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   result;
 
   ngOnInit() {
-    // this.dataService.preFetchData();
+     this.dataService.preFetchData();
   }
 
   getResult(input) {
@@ -25,6 +25,6 @@ export class AppComponent implements OnInit {
 
   constructor(problemFactory : EulerProblemFactory, private dataService: DataService) {
       this.problems = problemFactory.getEulerProblems();
-      this.selectedProblem = 8;
+      this.selectedProblem = 9;
   }
 }

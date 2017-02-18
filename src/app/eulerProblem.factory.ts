@@ -10,6 +10,7 @@ import { Problem9 } from './problems/problem9';
 import { Problem10 } from './problems/problem10';
 import { Problem11 } from './problems/problem11';
 import { Problem12 } from './problems/problem12';
+import { Problem13 } from './problems/problem13';
 import { Problem14 } from './problems/problem14';
 
 @Injectable()
@@ -30,6 +31,7 @@ export class EulerProblemFactory {
                 problem10: Problem10,
                 problem11: Problem11,
                 problem12: Problem12,
+                problem13: Problem13,
                 problem14: Problem14) {
         this.eulerProblems = [
             problem1 as EulerProblem,
@@ -41,6 +43,7 @@ export class EulerProblemFactory {
             problem10 as EulerProblem,
             problem11 as EulerProblem,
             problem12 as EulerProblem,
+            problem13 as EulerProblem,
             problem14 as EulerProblem
         ]             
     }
