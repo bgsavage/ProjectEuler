@@ -6,6 +6,7 @@ import { Problem2 } from './problems/problem2';
 import { Problem3 } from './problems/problem3';
 import { Problem4 } from './problems/problem4';
 import { Problem5 } from './problems/problem5';
+import { Problem6 } from './problems/problem6';
 import { Problem9 } from './problems/problem9';
 import { Problem10 } from './problems/problem10';
 import { Problem11 } from './problems/problem11';
@@ -27,6 +28,7 @@ export class EulerProblemFactory {
                 problem3: Problem3, 
                 problem4: Problem4,
                 problem5: Problem5,
+                problem6: Problem6,
                 problem9: Problem9,
                 problem10: Problem10,
                 problem11: Problem11,
@@ -39,6 +41,7 @@ export class EulerProblemFactory {
             problem3 as EulerProblem,
             problem4 as EulerProblem,
             problem5 as EulerProblem,
+            problem6 as EulerProblem,
             problem9 as EulerProblem,
             problem10 as EulerProblem,
             problem11 as EulerProblem,
