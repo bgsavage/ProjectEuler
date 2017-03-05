@@ -15,6 +15,7 @@ import { Problem11 } from './problems/problem11';
 import { Problem12 } from './problems/problem12';
 import { Problem13 } from './problems/problem13';
 import { Problem14 } from './problems/problem14';
+import { Problem15 } from './problems/problem15';
 
 @Injectable()
 
@@ -38,10 +39,12 @@ export class EulerProblemFactory {
                 problem11: Problem11,
                 problem12: Problem12,
                 problem13: Problem13,
-                problem14: Problem14) {
+                problem14: Problem14,
+                problem15: Problem15,
+                ) {
         this.eulerProblems = [
             problem1, problem2, problem3, problem4, problem5, problem6, problem7, problem8, problem9, problem10,
-            problem11, problem12, problem13, problem14
+            problem11, problem12, problem13, problem14, problem15
         ]             
     }
 }

@@ -13,6 +13,7 @@ import { Problem11 } from './problems/problem11';
 import { Problem12 } from './problems/problem12';
 import { Problem13 } from './problems/problem13';
 import { Problem14 } from './problems/problem14';
+import { Problem15 } from './problems/problem15';
 import { DataService } from './data/data.service';
 
 import { PrimeService } from './math/prime.service';
@@ -22,6 +23,6 @@ import { MathModule } from './math/math.module';
 
 @NgModule({
   imports:   [ DataModule, MathModule ],
-  providers: [ Problem1, Problem2, Problem3, Problem4, Problem5, Problem6, Problem7, Problem8, Problem9, Problem10, Problem11, Problem12, Problem13, Problem14 ]
+  providers: [ Problem1, Problem2, Problem3, Problem4, Problem5, Problem6, Problem7, Problem8, Problem9, Problem10, Problem11, Problem12, Problem13, Problem14, Problem15 ]
 })
 export class EulerModule { }

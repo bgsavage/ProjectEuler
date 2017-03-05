@@ -25,6 +25,6 @@ export class AppComponent implements OnInit {
 
   constructor(problemFactory : EulerProblemFactory, private dataService: DataService) {
       this.problems = problemFactory.getEulerProblems();
-      this.selectedProblem = 7;
+      this.selectedProblem = 14;
   }
 }
